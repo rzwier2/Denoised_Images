@@ -14,12 +14,11 @@ int main(int argc, char * argv[]) {
         cout << "file not found" << endl;
     }
     string noisyName;
-    fin >> noisyName;
+    fin >> noisyName; // the name of the first image file
 	
-    PpmImage denoised_image(noisyName); // The ppm image that we write to file. This is the base file
-    int a = 1;	
+    PpmImage denoised_image(noisyName); // The ppm image that we write to file. This is the base file	
 
-    for (int i = 0; i < 10; ++i) {
+    for (int i = 0; i < 9; ++i) {
        fin >> noisyName;
        cout << noisyName << endl; // print out the noisy image text file, and print out the names of the noisy images
        PpmImage ryans_image(noisyName); //Open up image
